@@ -13,7 +13,7 @@ browser <-> nginx container <-> php container <-> mysql(MariaDB) container
             └─ ./app/website/ ──┘                 └─ ./app/dbfile/
 ```
 
-### Directory Structrue
+### Directory Structure
 
 ```
 ├── app
