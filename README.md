@@ -7,13 +7,15 @@ A TEST LNMP docker environment for preview a php webapp. The whole project shoul
 ### Architecture
 
 There are 3 containers: nginx, php-fpm, mysql(MariaDB). All of the containers are from alpine linux image.
-
+```
 browser <-> nginx container <-> php container <-> mysql(MariaDB) container
             |                   |                 |
             └─ ./app/website/ ──┘                 └─ ./app/dbfile/
+```
 
 ### Directory Structrue
 
+```
 ├── app
 │   ├── dbfile // mysql dbfiles
 │   ├── log
@@ -24,6 +26,7 @@ browser <-> nginx container <-> php container <-> mysql(MariaDB) container
     ├── mysql // mysql config
     ├── nginx // nginx config
     └── php // php config
+```
 
 ### Run
 
