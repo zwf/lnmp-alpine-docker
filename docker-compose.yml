@@ -13,7 +13,7 @@ phpcontainer:
     - "9000"
   volumes:
     - ./configs/php/php.ini:/usr/local/etc/php/php.ini:ro
-    - ./app/website/:/usr/share/nginx/html
+    - ./app/website:/usr/share/nginx/html
   links:
     - mysqlcontainer
 
@@ -24,7 +24,8 @@ nginxcontainer:
     - "80:80"
   volumes:
     - ./configs/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-    - ./configs/conf.d/:/etc/nginx/conf.d/:ro
+    - ./configs/conf.d:/etc/nginx/conf.d:ro
+    - ./app/log/nginxlog:/var/log/nginx
     - ./app/website:/usr/share/nginx/html
   links:
     - phpcontainer
