@@ -4,6 +4,8 @@ mysqlcontainer:
   ports:
     - "3306:3306"
   volumes:
+    - ./configs/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    - ./app/log/mysqllog:/var/lib/mysql/mysql-bin
     - ./app/dbfile:/var/lib/mysql
 
 # php-fpm
